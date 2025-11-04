@@ -28,7 +28,7 @@ jobs:
       - name: Generate prisma
         run: npm run gen:prisma
         env:
-          DATABASE_URL: ''
+          DATABASE_URL: 'nothing'
 
       - name: Build project
         run: npm run build:prod

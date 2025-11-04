@@ -15,7 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # TODO build, test and deploy project
       - name: install node.js
         uses: actions/setup-node@v4
         with:
@@ -30,16 +29,13 @@ jobs:
         env:
           DATABASE_URL: 'nothing'
 
-      - name: Build project
-        run: npm run build:prod
-
-      - name: Build project
-        run: npm run build:prod
+      - name: Run unit tests
+        run: npm run test:ci
 
       - name: Install Render CLI
         run: |
           curl -L https://github.com/render-oss/cli/releases/download/v1.1.0/cli_1.1.0_linux_amd64.zip -o render.zip
-          unzip render.zip
+          unzip -n render.zip
           sudo mv cli_v1.1.0 /usr/local/bin/render
 
       - name: Trigger deploy with Render CLI

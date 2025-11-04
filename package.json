@@ -2,12 +2,14 @@
   "name": "bebroviy",
   "version": "1.0.0",
   "main": "main.ts",
-  "type": "module",
   "scripts": {
     "dev:tsx": "tsx watch ./src/main.ts",
     "dev:nodemon:tsx": "nodemon --exec tsx ./src/main.ts",
     "dev:nodemon:ts-node": "короче я бы тут хотел также настроить сетап с ts-node",
-    "gen:schemas": "orval --config orval.config.cjs"
+    "gen:schemas": "orval --config orval.config.cjs",
+    "test:ci": "vitest run",
+    "test:dev": "vitest",
+    "build:prod": "tsup src/main.ts --out-dir dist --format cjs"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "@types/express": "^5.0.3",
     "@types/node": "^24.8.1",
     "nodemon": "^3.1.10",
+    "tsup": "^8.5.0",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^5.1.4",

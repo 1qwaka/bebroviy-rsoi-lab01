@@ -45,6 +45,7 @@ export class PersonController {
             res.json(persons)
         } catch (e: unknown) {
             res.status(500).json({ message: 'Internal Error' })
+            console.error(e)
         }
     }
 
@@ -57,6 +58,7 @@ export class PersonController {
                 res.status(404).json({ message: e.message })
             } else {
                 res.status(500).json({ message: 'Internal Error' })
+                console.error(e)
             }
         }
     }
@@ -67,6 +69,7 @@ export class PersonController {
             res.status(201).header('Location', person.id.toString()).send();
         } catch (e: unknown) {
             res.status(500).json({ message: 'Internal Error' })
+            console.error(e)
         }
     };
 
@@ -79,6 +82,7 @@ export class PersonController {
                 res.status(404).json({ message: e.message })
             } else {
                 res.status(500).json({ message: 'Internal Error' })
+                console.error(e)
             }
         }
     };
@@ -89,6 +93,7 @@ export class PersonController {
             res.status(204).send();
         } catch (e: unknown) {
             res.status(500).json({ message: 'Internal Error' })
+            console.error(e)
         }
     };
 }

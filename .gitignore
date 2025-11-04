@@ -1238,4 +1238,4 @@ buildNumber.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
 
-/src/generated/prisma
+/src/gen/prisma

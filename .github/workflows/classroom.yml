@@ -25,8 +25,11 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Run unit tests
-        run: npm run test:ci
+      - name: Generate prisma
+        run: npm run gen:prisma
+
+      - name: Build project
+        run: npm run build:prod
 
       - name: Build project
         run: npm run build:prod

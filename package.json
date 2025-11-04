@@ -7,6 +7,7 @@
     "dev:nodemon:tsx": "nodemon --exec tsx ./src/main.ts",
     "dev:nodemon:ts-node": "короче я бы тут хотел также настроить сетап с ts-node",
     "gen:schemas": "orval --config orval.config.cjs",
+    "gen:prisma": "npx prisma generate",
     "test:ci": "vitest run",
     "test:dev": "vitest",
     "build:prod": "tsup src/main.ts --out-dir dist --format cjs"

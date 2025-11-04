@@ -12,7 +12,7 @@
     "test:dev": "vitest",
     "build:prod": "tsup src/main.ts --out-dir dist --format cjs",
     "migrate:prod": "prisma migrate deploy",
-    "build:render": "npm run gen:prisma && npm run migrate:prod && npm run build:prod"
+    "build:render": "npm i && npm run gen:prisma && npm run migrate:prod && npm run build:prod"
   },
   "author": "",
   "license": "ISC",
